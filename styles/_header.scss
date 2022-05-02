@@ -1,0 +1,40 @@
+@mixin flexCenter($justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin textDecorationLink($color) {
+    text-decoration: none;
+    color: $color;
+}
+
+header {
+    background-color: #333;
+
+    nav {
+        background-color: $backgroundColorMenu;
+    }
+
+    .navigation-menu {
+        color: $colorTextMenu;
+        text-transform: uppercase;
+        width: $width50;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /*Create grid with li fill all size of ul*/
+        list-style: none;
+
+        div {
+            a {
+                @include textDecorationLink(white);
+            }
+        }
+    }
+
+    .presentation {
+        height: $heightView;
+        @include flexCenter(center);
+        flex-direction: column;
+    }
+}

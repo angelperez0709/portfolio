@@ -1,0 +1,63 @@
+@import "./variables";
+@import "./header";
+
+body {
+    margin: $margin0;
+    overflow: hidden;
+}
+
+.presentation {
+    z-index: $zindex1;
+    background-image: url("https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    h1 {
+        font-size: $fontSizeH1;
+    }
+}
+
+.dedication {
+    animation: reveal 5s ease-in-out;
+
+    h1 {
+        font-size: $fontSizeH1;
+        z-index: $zindex0;
+        animation: slide 2s ease-in-out;
+    }
+}
+
+/*animation left to right*/
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes display-menu {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

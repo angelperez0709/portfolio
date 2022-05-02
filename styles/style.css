@@ -1,0 +1,132 @@
+header {
+  background-color: #333;
+}
+
+header nav {
+  background-color: #25d3c7;
+}
+
+header .navigation-menu {
+  color: white;
+  text-transform: uppercase;
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*Create grid with li fill all size of ul*/
+  list-style: none;
+}
+
+header .navigation-menu div a {
+  text-decoration: none;
+  color: white;
+}
+
+header .presentation {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.presentation {
+  z-index: 1;
+  background-image: url("https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.presentation h1 {
+  font-size: 3rem;
+}
+
+.dedication {
+  -webkit-animation: reveal 5s ease-in-out;
+          animation: reveal 5s ease-in-out;
+}
+
+.dedication h1 {
+  font-size: 3rem;
+  z-index: 0;
+  -webkit-animation: slide 2s ease-in-out;
+          animation: slide 2s ease-in-out;
+}
+
+/*animation left to right*/
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes display-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes display-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
