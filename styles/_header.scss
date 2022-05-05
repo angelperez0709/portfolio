@@ -1,40 +1,63 @@
-@mixin flexCenter($justify) {
-    display: flex;
-    justify-content: $justify;
-    align-items: center;
-}
-
-@mixin textDecorationLink($color) {
-    text-decoration: none;
-    color: $color;
-}
-
 header {
-    background-color: #333;
-
-    nav {
-        background-color: $backgroundColorMenu;
-    }
-
+    height: $heightView;
+    background-color: #16161a;
+    @include flexCenter(center);
+    flex-direction: column;
     .navigation-menu {
-        color: $colorTextMenu;
-        text-transform: uppercase;
-        width: $width50;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        /*Create grid with li fill all size of ul*/
+        @include flexCenter(space-around);
         list-style: none;
+    }
+    span{
+        color: white;
+        display: block;
+        font-family: monospace;
+        white-space: nowrap;
+        border-right: 2px solid;
+        width: 7rem;
+        animation: typing 2s steps(12), 
+        blink .5s infinite step-end;
+        overflow: hidden;
+    }
+    .navigation-menu{
+        @include flexCenter(center);
+    }
+}
+/*keyframe that simulates a typewritter*/
+@keyframes typing{
+    from {width: 0}
+}
+@keyframes blink {
+    from,to{border-color: transparent;}
+    50%{border-color: white;}
 
-        div {
-            a {
-                @include textDecorationLink(white);
-            }
-        }
+}
+.presentation {
+    z-index: $zindex1;
+/*    background-image: url("https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-clip: text;
+    color: transparent;*/
+    color: white;
+    font-size: $fontSizeH2;
+    @include flexCenter(center);
+    flex-direction: column;
+}
+
+.dedication {
+    animation: reveal 4s ease-in-out;
+    z-index: $zindex0;
+}
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
     }
 
-    .presentation {
-        height: $heightView;
-        @include flexCenter(center);
-        flex-direction: column;
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

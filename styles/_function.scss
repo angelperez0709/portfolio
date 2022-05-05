@@ -1,0 +1,9 @@
+@mixin textDecorationLink($color) {
+    text-decoration: none;
+    color: $color;
+}
+@mixin flexCenter($justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}

@@ -1,30 +1,12 @@
+/*Font size of a h2*/
+/*Font size of a h3*/
+/*Font size of a h4*/
+/*Font size of a h5*/
+/*Font size of a h6*/
+/*Font size of a p*/
 header {
-  background-color: #333;
-}
-
-header nav {
-  background-color: #25d3c7;
-}
-
-header .navigation-menu {
-  color: white;
-  text-transform: uppercase;
-  width: 50%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  /*Create grid with li fill all size of ul*/
-  list-style: none;
-}
-
-header .navigation-menu div a {
-  text-decoration: none;
-  color: white;
-}
-
-header .presentation {
   height: 100vh;
+  background-color: #16161a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,93 +22,166 @@ header .presentation {
           flex-direction: column;
 }
 
-body {
-  margin: 0;
+header .navigation-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+header span {
+  color: white;
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: 7rem;
+  -webkit-animation: typing 2s steps(12), blink 0.5s infinite step-end;
+          animation: typing 2s steps(12), blink 0.5s infinite step-end;
   overflow: hidden;
+}
+
+header .navigation-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*keyframe that simulates a typewritter*/
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 
 .presentation {
   z-index: 1;
-  background-image: url("https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
-.presentation h1 {
-  font-size: 3rem;
+  /*    background-image: url("https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-clip: text;
+    color: transparent;*/
+  color: white;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .dedication {
-  -webkit-animation: reveal 5s ease-in-out;
-          animation: reveal 5s ease-in-out;
-}
-
-.dedication h1 {
-  font-size: 3rem;
+  -webkit-animation: reveal 4s ease-in-out;
+          animation: reveal 4s ease-in-out;
   z-index: 0;
-  -webkit-animation: slide 2s ease-in-out;
-          animation: slide 2s ease-in-out;
-}
-
-/*animation left to right*/
-@-webkit-keyframes slide {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-@keyframes slide {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
 }
 
 @-webkit-keyframes reveal {
   0% {
     opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
 @keyframes reveal {
   0% {
     opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
-@-webkit-keyframes display-menu {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.buttonLinkNav {
+  /*Design a button in a box white*/
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  height: 3rem;
+  width: 6rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-@keyframes display-menu {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.buttonLinkNav:hover {
+  background-color: #7f5af0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-color: #7f5af0;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=style.css.map */

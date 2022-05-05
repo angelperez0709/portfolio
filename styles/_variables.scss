@@ -3,14 +3,28 @@ $zindex0 : 0;
 $zindex1 : 1;
 $zindex2 : 2;
 $fontSizeH1 : 3rem;
+/*Font size of a h2*/
+$fontSizeH2 : 2rem;
+/*Font size of a h3*/
+$fontSizeH3 : 1.5rem;
+/*Font size of a h4*/
+$fontSizeH4 : 1.25rem;
+/*Font size of a h5*/
+$fontSizeH5 : 1rem;
+/*Font size of a h6*/
+$fontSizeH6 : 0.75rem;
+/*Font size of a p*/
+$fontSizeP : 0.5rem;
 $breakpoint : 768px;
 $width : 100%;
 $width50 : 50%;
+$width30 : 30%;
 $height : 100%;
 $heightView : 100vh;
 $padding : 1rem;
 $margin : 1rem;
 $widthLiMenu : 33%;
 $padding0 : 0;
-$backgroundColorMenu : #25d3c7;
-$colorTextMenu : white;
+$colorTextMenu : black;
+$heightButtonNav : 3rem;
+$widthButtonNav : 6rem;
