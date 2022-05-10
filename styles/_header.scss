@@ -1,45 +1,45 @@
 header {
     height: $heightView;
-    background-color: #16161a;
+    background-color: #0f0e17;
     @include flexCenter(center);
     flex-direction: column;
+
+    #enter {
+        @include flexCenter(center);
+        flex-direction: column;
+        animation: fadeIn 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 4s;
+        div+span {
+            display: block;
+            color: white;
+            font-family: monospace;
+            white-space: nowrap;
+            border-right: 2px solid;
+            width: 7rem;
+            animation: typing 2s steps(12),
+                blink .5s infinite step-end;
+            overflow: hidden;
+        }
+    }
+
     .navigation-menu {
-        @include flexCenter(space-around);
         list-style: none;
     }
-    span{
-        color: white;
-        display: block;
-        font-family: monospace;
-        white-space: nowrap;
-        border-right: 2px solid;
-        width: 7rem;
-        animation: typing 2s steps(12), 
-        blink .5s infinite step-end;
-        overflow: hidden;
-    }
-    .navigation-menu{
+}
+
+@media screen and (max-width: $breakpoint) {
+   .navigation-menu{
+    @include displayGrid(repeat(2,1fr));
+   }
+}
+@media screen and (min-width: $breakpoint) {
+    .navigation-menu {
         @include flexCenter(center);
     }
-}
-/*keyframe that simulates a typewritter*/
-@keyframes typing{
-    from {width: 0}
-}
-@keyframes blink {
-    from,to{border-color: transparent;}
-    50%{border-color: white;}
-
-}
+ }        
 .presentation {
     z-index: $zindex1;
-/*    background-image: url("https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-clip: text;
-    color: transparent;*/
     color: white;
     font-size: $fontSizeH2;
     @include flexCenter(center);
@@ -47,8 +47,46 @@ header {
 }
 
 .dedication {
-    animation: reveal 4s ease-in-out;
+    animation: reveal 3s ease-in-out;
     z-index: $zindex0;
+}
+
+/*keyframe that simulates a typewritter*/
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+
+}
+
+@keyframes fadeIn {
+
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 @keyframes reveal {
     0% {
